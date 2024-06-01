@@ -5,7 +5,12 @@ using Newtonsoft.Json;
 public class Artwork
 {
     public string title { get; set; }
-    
+
+    public Artwork()
+    {
+        title = " ";
+    }
+
 
     public static string GetArtworks(string query)
     {
