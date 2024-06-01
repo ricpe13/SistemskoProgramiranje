@@ -10,14 +10,10 @@ class Cache
     {
         Console.WriteLine("Brisem kes");
         Cache.cache.Clear();
-        cacheIsEmpty = 0; ;
-
-        if (cacheIsEmpty == 0)
-        {
-            Console.WriteLine("Kes je prazan");
-            cacheCleanupTimer.Stop();
-            Console.WriteLine("Stopiran je tajmer");
-        }
+        cacheIsEmpty = 0; 
+        cacheCleanupTimer.Stop();
+        Console.WriteLine("Stopiran je tajmer");
+        
     }
 
 }
