@@ -7,6 +7,7 @@ class Program
 {
     static void Main()
     {
+        Cache.cacheCleanupTimer.Elapsed += (sender, e) => Cache.CacheCleanup();
         HttpServer.StartServer();
     }
 

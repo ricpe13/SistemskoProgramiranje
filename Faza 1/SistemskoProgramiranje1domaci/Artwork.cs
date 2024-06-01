@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 public class Artwork
 {
     public string title { get; set; }
-    public string api_link { get; set; }
+    
 
     public static string GetArtworks(string query)
     {
@@ -36,6 +36,13 @@ public class Artwork
                 result += $"<p>{artwork.title}</p>";
             }
             result += "</body></html>";
+
+            if (Cache.cacheIsEmpty == 0)
+            {
+                Cache.cacheCleanupTimer.Start();
+                Cache.cacheIsEmpty = Cache.cacheIsEmpty = 1;
+                Console.WriteLine("Startovan je tajmer");
+            }
 
             Cache.cache.Add(query, result);
 
