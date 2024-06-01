@@ -4,6 +4,8 @@ using System.Threading;
 
 class HttpServer
 {
+    public static WebClient client = new WebClient();
+
 
     public static void StartServer()
     {
