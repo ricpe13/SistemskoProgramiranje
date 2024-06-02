@@ -24,7 +24,7 @@ public class Artwork
         try
         {
             string url = $"https://api.artic.edu/api/v1/artworks/search?q={query}&limit=100";
-            HttpServer.client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
+            HttpServer.client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
             string responseBody = await HttpServer.client.GetStringAsync(url);
             var artworkResponse = JsonConvert.DeserializeObject<ArtworkResponse>(responseBody);
             if (artworkResponse.data.Count == 0)
