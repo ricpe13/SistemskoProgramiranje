@@ -43,7 +43,7 @@ public class Artwork
             if (Cache.cacheIsEmpty == 0)
             {
                 Cache.cacheCleanupTimer.Start();
-                Cache.cacheIsEmpty = Cache.cacheIsEmpty = 1;
+                Cache.cacheIsEmpty = 1;
                 Console.WriteLine("Startovan je tajmer");
             }
 
