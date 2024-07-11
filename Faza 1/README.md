@@ -8,3 +8,5 @@ korišćenjem GET metode. Ukoliko navedena umetnička dela ne postoje, prikazati
 
 Način funkcionisanja Art Institute of Chicago API-a je moguće proučiti na sledećem linku:
 https://api.artic.edu/docs/#introduction
+
+URL: http://localhost:5000/parametar_koji_zelimo_da_pretrazimo
