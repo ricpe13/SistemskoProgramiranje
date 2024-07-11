@@ -31,7 +31,7 @@ public class Artwork
             var artworkResponse = JsonConvert.DeserializeObject<ArtworkResponse>(responseBody);
             if (artworkResponse.data.Count == 0)
             {
-                return "<html><body>Greska: Nema umetnickih dela koja zadovoljavaju vasu pretragu.</body></html>";
+                return "<html><body>Greska: Nema umetnickih dela koja zadovoljavaju Vasu pretragu.</body></html>";
             }
             string result = "<html><body>";
             foreach (var artwork in artworkResponse.data)
